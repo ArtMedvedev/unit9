@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS81: Unit 9</title>
+</head>
+<body>
+
+    <p>
+        <strong>We</strong> have just started <strong>this</strong> section for the users (<strong>beginner</strong>
+        to intermediate) who want to work with <strong>various</strong> JavaScript <strong>problems</strong> and
+        write scripts online to <strong>test</strong> their JavaScript <strong>skill</strong>.<br><hr><br>
+        Try to click on the <strong>strong word</strong>.
+    </p>
+
+    <script>
+        var wordItems = document.getElementsByTagName('strong');
+        for (var i = 0; i <= wordItems.length; i++) {
+            // Mouse In -> red
+            wordItems[i].addEventListener('mouseover', function () {
+                this.style.color = 'red';
+            })
+            // Mouse Click -> alert
+            wordItems[i].addEventListener('click', function () {
+                alert('Congratulations! You just clicked on the words in the strong tags');
+            })
+            // Mouse Out -> green
+            wordItems[i].addEventListener('mouseout', function () {
+                this.style.color = 'green';
+            })
+        }
+    </script>
+
+</body>
+</html>
